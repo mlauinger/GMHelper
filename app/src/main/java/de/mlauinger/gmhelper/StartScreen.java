@@ -1,4 +1,4 @@
-package mlauinger.de.gmhelper;
+package de.mlauinger.gmhelper;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

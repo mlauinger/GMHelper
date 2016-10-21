@@ -1,4 +1,4 @@
-package mlauinger.de.gmhelper;
+package de.mlauinger.gmhelper;
 
 import org.junit.Test;
 
