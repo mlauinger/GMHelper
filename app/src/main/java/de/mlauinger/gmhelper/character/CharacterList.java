@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.Arrays;
@@ -14,6 +13,7 @@ import java.util.List;
 import de.mlauinger.gmhelper.R;
 
 public class CharacterList extends Fragment {
+
     public CharacterList() {
         // Required empty public constructor
     }
@@ -21,9 +21,12 @@ public class CharacterList extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        List<String> characterNames = Arrays.asList("Theoden", "Boromir", "Faramir", "Bernd", "asd", "dfsfsf", "asdas", "dhdfgh", "dfgdg", "sdfsfd");
+        List<CharacterModel> characters = Arrays.asList(
+                new CharacterModel("Test", "bard", 21),
+                new CharacterModel("Test2", "warrior", 15)
+        );
 
-        ArrayAdapter<String> characterListAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_characterlist, R.id.list_item_characterlist_charactername, characterNames);
+        CharacterListAdapter characterListAdapter = new CharacterListAdapter(getActivity(), characters);
 
 
         View rootView = inflater.inflate(R.layout.fragment_character_list, container, false);
