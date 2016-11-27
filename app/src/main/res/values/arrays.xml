@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classes_array" >
+        <item>Bard</item>
+        <item>Warrior</item>
+        <item>Barbarian</item>
+        <item>Paladin</item>
+        <item>Monk</item>
+        <item>Sorcerer</item>
+    </string-array>
+</resources>

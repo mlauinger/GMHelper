@@ -1,7 +1,7 @@
 package de.mlauinger.gmhelper.character;
 
 import de.mlauinger.gmhelper.abilities.Abilities;
-import de.mlauinger.gmhelper.abilities.Attribute;
+import de.mlauinger.gmhelper.abilities.Strength;
 
 public class CharacterModel {
     private String name;
@@ -13,7 +13,7 @@ public class CharacterModel {
         this.name = name;
         this.characterClass = characterClass;
         this.armorClass = armorClass;
-
+        this.abilities = new Abilities();
     }
 
     public String getName() {
