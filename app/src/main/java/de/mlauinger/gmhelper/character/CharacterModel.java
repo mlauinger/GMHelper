@@ -1,14 +1,19 @@
 package de.mlauinger.gmhelper.character;
 
+import de.mlauinger.gmhelper.abilities.Abilities;
+import de.mlauinger.gmhelper.abilities.Attribute;
+
 public class CharacterModel {
     private String name;
     private String characterClass;
     private int armorClass;
+    private Abilities abilities;
 
     public CharacterModel(String name, String characterClass, int armorClass) {
         this.name = name;
         this.characterClass = characterClass;
         this.armorClass = armorClass;
+
     }
 
     public String getName() {

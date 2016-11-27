@@ -2,6 +2,8 @@ package de.mlauinger.gmhelper.character;
 
 import org.junit.Test;
 
+import de.mlauinger.gmhelper.abilities.Attribute;
+
 import static org.junit.Assert.assertEquals;
 
 /**

@@ -1,4 +1,4 @@
-package de.mlauinger.gmhelper.character;
+package de.mlauinger.gmhelper.abilities;
 
 /**
  *
