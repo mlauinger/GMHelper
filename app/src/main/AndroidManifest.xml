@@ -3,6 +3,7 @@
     package="de.mlauinger.gmhelper">
 
     <application
+        android:name="de.mlauinger.gmhelper.GMHelper"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +19,9 @@
         <activity
             android:name=".CreateCharacter"
             android:label="@string/title_activity_create_character"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <meta-data android:name="AA_DB_NAME" android:value="GMHelper.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
     </application>
 
 </manifest>
