@@ -88,6 +88,10 @@ public class CreateCharacter extends AppCompatActivity {
 
 
     public void saveCharacter(View view) {
-
+        Character character = new Character();
+        character.setName(getCharacterName());
+        character.setCharacterClass(getClassValue());
+        character.setArmorClass(10);
+        character.save();
     }
 }

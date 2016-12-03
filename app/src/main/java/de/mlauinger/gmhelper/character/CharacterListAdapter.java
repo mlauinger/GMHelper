@@ -13,11 +13,11 @@ import java.util.List;
 import de.mlauinger.gmhelper.R;
 
 
-public class CharacterListAdapter extends ArrayAdapter<CharacterModel> {
+public class CharacterListAdapter extends ArrayAdapter<Character> {
 
-    private List<CharacterModel> characters;
+    private List<Character> characters;
 
-    public CharacterListAdapter(Context context, List<CharacterModel> objects) {
+    public CharacterListAdapter(Context context, List<Character> objects) {
         super(context, 0, objects);
         this.characters = objects;
     }
@@ -25,7 +25,7 @@ public class CharacterListAdapter extends ArrayAdapter<CharacterModel> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        CharacterModel character = getItem(position);
+        Character character = getItem(position);
 
         if (null == convertView) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_characterlist, parent, false);

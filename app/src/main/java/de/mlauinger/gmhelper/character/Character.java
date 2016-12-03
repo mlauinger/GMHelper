@@ -1,19 +1,35 @@
 package de.mlauinger.gmhelper.character;
 
-import de.mlauinger.gmhelper.abilities.Abilities;
-import de.mlauinger.gmhelper.abilities.Strength;
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
 
-public class CharacterModel {
+import de.mlauinger.gmhelper.abilities.Abilities;
+
+@Table(name = "character")
+public class Character extends Model {
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "class")
     private String characterClass;
+
+    @Column(name = "armor_class")
     private int armorClass;
+
+   @Column(name = "abilities")
     private Abilities abilities;
 
-    public CharacterModel(String name, String characterClass, int armorClass) {
+    public Character(String name, String characterClass, int armorClass) {
         this.name = name;
         this.characterClass = characterClass;
         this.armorClass = armorClass;
         this.abilities = new Abilities();
+    }
+
+    public Character() {
+        super();
     }
 
     public String getName() {
@@ -38,5 +54,14 @@ public class CharacterModel {
 
     public void setCharacterClass(String characterClass) {
         this.characterClass = characterClass;
+    }
+
+
+    public Abilities getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(Abilities abilities) {
+        this.abilities = abilities;
     }
 }

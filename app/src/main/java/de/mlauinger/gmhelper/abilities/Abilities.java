@@ -1,16 +1,32 @@
 package de.mlauinger.gmhelper.abilities;
 
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
 /**
  *
  */
 
-public class Abilities {
+@Table(name = "Abilities")
+public class Abilities extends Model{
 
+    @Column(name = "str")
     private final Strength strength;
+
+    @Column(name = "con")
     private final Constitution constitution;
+
+    @Column(name = "dex")
     private final Dexterity dexterity;
+
+    @Column(name = "int")
     private final Intelligence intelligence;
+
+    @Column(name = "wis")
     private final Wisdom wisdom;
+
+    @Column(name = "cha")
     private final Charisma charisma;
 
     public Abilities() {
@@ -30,6 +46,8 @@ public class Abilities {
         this.wisdom = wisdom;
         this.charisma = charisma;
     }
+
+
 
     public Strength getStrength() {
         return strength;
