@@ -30,7 +30,7 @@ public class CreateCharacter extends AppCompatActivity {
         return getClassField().getSelectedItem().toString();
     }
 
-    private EditText getConstitutionField(){
+    private EditText getConstitutionField() {
         return (EditText) findViewById(R.id.constitution);
     }
 
@@ -38,7 +38,7 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getConstitutionField().getText().toString());
     }
 
-    private EditText getStrengthField(){
+    private EditText getStrengthField() {
         return (EditText) findViewById(R.id.strength);
     }
 
@@ -46,7 +46,7 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getStrengthField().getText().toString());
     }
 
-    private EditText getCharacterNameField(){
+    private EditText getCharacterNameField() {
         return (EditText) findViewById(R.id.character_name);
     }
 
@@ -54,7 +54,7 @@ public class CreateCharacter extends AppCompatActivity {
         return getCharacterNameField().getText().toString();
     }
 
-    private EditText getDexterityField(){
+    private EditText getDexterityField() {
         return (EditText) findViewById(R.id.dexterity);
     }
 
@@ -62,7 +62,7 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getDexterityField().getText().toString());
     }
 
-    private EditText getIntelligenceField(){
+    private EditText getIntelligenceField() {
         return (EditText) findViewById(R.id.intelligence);
     }
 
@@ -70,7 +70,7 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getIntelligenceField().getText().toString());
     }
 
-    private EditText getWisdomField(){
+    private EditText getWisdomField() {
         return (EditText) findViewById(R.id.wisdom);
     }
 
@@ -78,7 +78,7 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getWisdomField().getText().toString());
     }
 
-    private EditText getCharismaField(){
+    private EditText getCharismaField() {
         return (EditText) findViewById(R.id.charisma);
     }
 
@@ -86,12 +86,28 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getCharismaField().getText().toString());
     }
 
+    private EditText getACField() {
+        return (EditText) findViewById(R.id.ac);
+    }
+
+    private int getAC() {
+        return Integer.parseInt(getACField().getText().toString());
+    }
+
+    private EditText getMaxHPField() {
+        return (EditText) findViewById(R.id.max_hp);
+    }
+
+    private int getMaxHP() {
+        return Integer.parseInt(getMaxHPField().getText().toString());
+    }
+
 
     public void saveCharacter(View view) {
         Character character = new Character();
         character.setName(getCharacterName());
         character.setCharacterClass(getClassValue());
-        character.setArmorClass(10);
+        character.setArmorClass(getAC());
         character.save();
     }
 }
