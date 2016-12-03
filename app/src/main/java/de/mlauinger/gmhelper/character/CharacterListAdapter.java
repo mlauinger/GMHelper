@@ -33,9 +33,11 @@ public class CharacterListAdapter extends ArrayAdapter<Character> {
 
         TextView characterName = (TextView) convertView.findViewById(R.id.characterName);
         TextView characterClass = (TextView) convertView.findViewById(R.id.characterClass);
+        TextView maxHP = (TextView) convertView.findViewById(R.id.max_hp);
 
         characterName.setText(character.getName());
         characterClass.setText(character.getCharacterClass());
+        maxHP.setText(String.valueOf(character.getMaxHP()));
 
         return convertView;
     }

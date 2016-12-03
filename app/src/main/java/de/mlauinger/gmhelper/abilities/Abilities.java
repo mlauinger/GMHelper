@@ -9,7 +9,7 @@ import com.activeandroid.annotation.Table;
  */
 
 @Table(name = "Abilities")
-public class Abilities extends Model{
+public class Abilities extends Model {
 
     @Column(name = "str")
     private final Strength strength;
@@ -46,8 +46,6 @@ public class Abilities extends Model{
         this.wisdom = wisdom;
         this.charisma = charisma;
     }
-
-
 
     public Strength getStrength() {
         return strength;

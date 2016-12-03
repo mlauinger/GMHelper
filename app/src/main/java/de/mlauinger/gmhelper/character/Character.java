@@ -18,8 +18,11 @@ public class Character extends Model {
     @Column(name = "armor_class")
     private int armorClass;
 
-   @Column(name = "abilities")
+    @Column(name = "abilities")
     private Abilities abilities;
+
+    @Column(name = "max_hp")
+    private int maxHP;
 
     public Character(String name, String characterClass, int armorClass) {
         this.name = name;
@@ -56,6 +59,13 @@ public class Character extends Model {
         this.characterClass = characterClass;
     }
 
+    public int getMaxHP() {
+        return maxHP;
+    }
+
+    public void setMaxHP(int maxHP) {
+        this.maxHP = maxHP;
+    }
 
     public Abilities getAbilities() {
         return abilities;

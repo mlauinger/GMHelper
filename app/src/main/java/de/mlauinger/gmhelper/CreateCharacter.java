@@ -109,12 +109,12 @@ public class CreateCharacter extends AppCompatActivity {
         return Integer.parseInt(getMaxHPField().getText().toString());
     }
 
-
     public void saveCharacter(View view) {
         Character character = new Character();
         character.setName(getCharacterName());
         character.setCharacterClass(getClassValue());
         character.setArmorClass(getAC());
+        character.setMaxHP(getMaxHP());
         character.setAbilities(
                 new Abilities(new Strength(getStrength()), new Constitution(getConstitution()),
                         new Dexterity(getDexterity()), new Intelligence(getIntelligence()),

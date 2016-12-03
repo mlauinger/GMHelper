@@ -1,21 +1,35 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical">
+
     <TextView
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/characterName"
-        android:layout_width="wrap_content"
+        android:layout_width="277dp"
         android:text="Name"
-        android:layout_weight="0.40"
         android:textSize="24sp"
-        android:layout_marginTop="5dp"/>
+        android:layout_weight="0.12"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/max_hp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/characterName" />
 
     <TextView
         android:id="@+id/characterClass"
-        android:layout_width="wrap_content"
+        android:layout_width="114dp"
         android:layout_height="wrap_content"
         android:text="Class"
-        android:layout_marginBottom="5dp"/>
-</LinearLayout>
+        android:layout_weight="0.03"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/space"
+        android:layout_toEndOf="@+id/space" />
+</RelativeLayout>
