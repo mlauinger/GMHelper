@@ -2,21 +2,92 @@ package de.mlauinger.gmhelper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+
+import de.mlauinger.gmhelper.character.Character;
 
 public class CreateCharacter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_character);
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.classes_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        getClassField().setAdapter(adapter);
     }
 
+    private Spinner getClassField() {
+        return (Spinner) findViewById(R.id.character_class);
+    }
+
+    private String getClassValue() {
+        return getClassField().getSelectedItem().toString();
+    }
+
+    private EditText getConstitutionField(){
+        return (EditText) findViewById(R.id.constitution);
+    }
+
+    private int getConstitution() {
+        return Integer.parseInt(getConstitutionField().getText().toString());
+    }
+
+    private EditText getStrengthField(){
+        return (EditText) findViewById(R.id.strength);
+    }
+
+    private int getStrength() {
+        return Integer.parseInt(getStrengthField().getText().toString());
+    }
+
+    private EditText getCharacterNameField(){
+        return (EditText) findViewById(R.id.character_name);
+    }
+
+    private String getCharacterName() {
+        return getCharacterNameField().getText().toString();
+    }
+
+    private EditText getDexterityField(){
+        return (EditText) findViewById(R.id.dexterity);
+    }
+
+    private int getDexterity() {
+        return Integer.parseInt(getDexterityField().getText().toString());
+    }
+
+    private EditText getIntelligenceField(){
+        return (EditText) findViewById(R.id.intelligence);
+    }
+
+    private int getIntelligence() {
+        return Integer.parseInt(getIntelligenceField().getText().toString());
+    }
+
+    private EditText getWisdomField(){
+        return (EditText) findViewById(R.id.wisdom);
+    }
+
+    private int getWisdom() {
+        return Integer.parseInt(getWisdomField().getText().toString());
+    }
+
+    private EditText getCharismaField(){
+        return (EditText) findViewById(R.id.charisma);
+    }
+
+    private int getCharisma() {
+        return Integer.parseInt(getCharismaField().getText().toString());
+    }
+
+
+    public void saveCharacter(View view) {
+
+    }
 }
