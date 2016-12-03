@@ -10,4 +10,7 @@ public class Charisma extends Attribute {
         super("CHA", 10);
     }
 
+    public Charisma(int value) {
+        super("CHA", value);
+    }
 }

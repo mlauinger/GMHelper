@@ -7,6 +7,13 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import de.mlauinger.gmhelper.abilities.Abilities;
+import de.mlauinger.gmhelper.abilities.Charisma;
+import de.mlauinger.gmhelper.abilities.Constitution;
+import de.mlauinger.gmhelper.abilities.Dexterity;
+import de.mlauinger.gmhelper.abilities.Intelligence;
+import de.mlauinger.gmhelper.abilities.Strength;
+import de.mlauinger.gmhelper.abilities.Wisdom;
 import de.mlauinger.gmhelper.character.Character;
 
 public class CreateCharacter extends AppCompatActivity {
@@ -108,6 +115,10 @@ public class CreateCharacter extends AppCompatActivity {
         character.setName(getCharacterName());
         character.setCharacterClass(getClassValue());
         character.setArmorClass(getAC());
+        character.setAbilities(
+                new Abilities(new Strength(getStrength()), new Constitution(getConstitution()),
+                        new Dexterity(getDexterity()), new Intelligence(getIntelligence()),
+                        new Wisdom(getWisdom()), new Charisma(getCharisma())));
         character.save();
     }
 }
