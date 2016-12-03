@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import java.util.Arrays;
+import com.activeandroid.query.Select;
+
 import java.util.List;
 
 import de.mlauinger.gmhelper.R;
@@ -22,13 +23,13 @@ public class CharacterList extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
+        List<Character> characters = new Select().all().from(Character.class).execute();
+        CharacterListAdapter characterListAdapter = new CharacterListAdapter(getActivity(), characters);
 
         View rootView = inflater.inflate(R.layout.fragment_character_list, container, false);
 
-        ListView aktienlisteListView = (ListView) rootView.findViewById(R.id.listview_aktienliste);
-
+        ListView characterListView = (ListView) rootView.findViewById(R.id.listview_characterlist);
+        characterListView.setAdapter(characterListAdapter);
         return rootView;
     }
 }

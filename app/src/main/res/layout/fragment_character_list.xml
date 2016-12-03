@@ -7,7 +7,7 @@
 
 
     <ListView
-        android:id="@+id/listview_aktienliste"
+        android:id="@+id/listview_characterlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
